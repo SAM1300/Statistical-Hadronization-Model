@@ -1,0 +1,10 @@
+# include <vector>
+void plots(){
+std::vector<double> t = {0.182679, 0.183434, 0.179777, 0.183531, 0.181808, 0.18418, 0.187446, 0.186666, 0.18494};
+std::vector<double> c = {0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0};
+std::vector<double> ex= {0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0};
+std::vector<double> ey = {0.00829419, 0.00759606, 0.00671122, 0.00667164, 0.00578851, 0.00598469, 0.00613709, 0.00580632, 0.00590383};
+TGraphErrors* p = new TGraphErrors(9,c,t,ex,ey);
+p -> SetTitle("Temperature vs Centrality");
+p -> Draw("ALP");
+} 
